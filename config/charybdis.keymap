@@ -92,6 +92,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Layer3 {
+            bindings = <&mo 3>;
+            key-positions = <50 51>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -107,7 +116,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,
+                // 编码器1：上下滚动,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -137,11 +146,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans          &trans            &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans             &trans          &trans            &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_VOLUME_UP    &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_VOLUME_DOWN  &trans          &trans            &trans      &trans  &trans
+                        &trans  &trans  &trans    &trans             &trans
                                 &trans  &trans    &trans
             >;
         };
